@@ -1,5 +1,5 @@
 // Karma configuration
-// Generated on Wed Aug 10 2016 23:38:09 GMT+0900 (대한민국 표준시)
+// Generated on Wed Aug 10 2016 23:55:03 GMT+0900 (대한민국 표준시)
 
 module.exports = function(config) {
   config.set({
@@ -15,7 +15,22 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      
+
+      // dependencies
+      'components/jquery/jquery.js',
+      'components/angular/angular.min.js',
+
+      // application code
       'app/**/*.js',
+
+      // test dependencies
+      'components/angular-mocks/angular-mocks.js',
+      'components/chai/chai.js',
+      'test/mocha.conf.js',
+      'test/chai.conf.js',
+
+      // tests
       'test/**/*.test.js'
     ],
 
@@ -56,7 +71,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome', 'Firefox', 'IE'],
+    browsers: ['Chrome', 'Firefox'],
 
 
     // Continuous Integration mode
